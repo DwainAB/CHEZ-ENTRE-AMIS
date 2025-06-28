@@ -1,0 +1,225 @@
+.containerGlobalNavbar{
+    position: relative;
+    height: 100vh;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.containerGlobalNavbar h1{
+    font-family: var(--primary-font);
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+
+}
+
+.containerTitle{
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.imgNavbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -5;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+}
+
+.shadowNavbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: -4;
+}
+
+.containerNavbar{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 80px;
+    padding-right: 80px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.containerImgNavbar{
+    width: 350px;
+    display: flex;
+    justify-content: end;
+}
+
+.containerNavbar span:hover {
+    cursor: pointer;
+}
+
+.logoNavbar{
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+}
+
+.listNavbar{
+    display: flex;
+    gap: 30px;
+}
+
+.itemListNavbar{
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+}
+
+/* Container to center the mouse on the page */
+.mouse-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mouse shape */
+.mouse {
+    width: 40px;
+    height: 70px;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* Scroll wheel */
+.scroll-wheel {
+    width: 6px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.5s infinite;
+}
+
+/* Scroll animation */
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        top: 10px;
+    }
+    50% {
+        opacity: 1;
+        top: 30px;
+    }
+    100% {
+        opacity: 0;
+        top: 50px;
+    }
+}
+
+
+@media screen and (max-width: 1050px) {
+    .containerNavbar {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary-color-opacity);
+        transform: translateX(100%);
+        z-index: 998;
+    }
+
+    .containerGlobalNavbar{
+        border-bottom: 0;
+    }
+
+    .listNavbar{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .containerImgNavbar{
+        width: auto;
+        margin-bottom: 50px;
+    }
+
+    .containerImgNavbar img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .itemListNavbar{
+        border: 2px solid var(--primary-color);
+        color: black!important;
+        width: 150px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .containerNavbar.open {
+        transform: translateX(0);
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .menu-icon div {
+        width: 100%;
+        height: 4px;
+        background-color: var(--primary-color);
+        margin: 5px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-icon.open div:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-icon.open div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.open div:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+@media screen and (max-width:980px ) {
+    .containerGlobalNavbar h1{
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width:690px ) {
+    .containerTitle{
+        width: 100%;
+    }
+    
+    .containerGlobalNavbar h1{
+        font-size: 2.8rem;
+        width: 100%;
+        text-align: center;
+    }
+}

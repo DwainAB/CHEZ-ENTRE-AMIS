@@ -1,0 +1,114 @@
+.containerGlobalInfoRestaurant{
+    background-color: var(--secondary-color);
+    padding-top: 20px;
+    margin-top: 70px;
+    padding-bottom: 50px;
+}
+
+.container-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.titleInfoRestaurant{
+    text-align: center;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.hour-title{
+    font-size: clamp(1.7rem,1.8vw,2.1rem);
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    color: #000;
+}
+
+.day, .hour{
+    font-size: clamp(1rem,1.04vw,1.25rem);
+    font-weight: 600;
+    font-family: var(--secondary-font);
+}
+
+.day{
+    color: #000;
+}
+
+.hour{
+    color: var(--primary-color);
+}
+
+.opening{
+    display: flex;
+    gap: 20px;
+}
+
+.container-map iframe{
+    border-radius: 15px;
+    border: 0;
+
+}
+
+iframe{
+    width: clamp(20rem,29.16vw,35rem);
+    height: clamp(25rem,25.83vw,31rem);    
+}
+
+.container-map{
+    width: clamp(20rem,29.16vw,35rem);
+}
+
+@media screen and (max-width:765px) {
+    .container-info{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .container-info-hour{
+        margin: 0 auto;
+    }
+
+    .hour-title{
+        text-align: center;
+    }
+
+    .container-map{
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:890px) {
+    .container-info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 20px;
+    }
+
+    .container-map{
+        width: 100%;
+        height: 300px;
+    }
+
+    .container-map iframe{
+        width: 100%;
+        border-radius: 0;
+        height: 300px;
+    }
+
+    .hour-title{
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    .titleInfoRestaurant{
+        font-size: 2rem;
+    }
+
+}

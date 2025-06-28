@@ -1,0 +1,136 @@
+.containerGlobalFooter {
+    padding-bottom: 30px;
+}
+
+.titleFooter {
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.lineFooter {
+    border: 2px solid var(--primary-color);
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.containerContentFooter {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentFooterInfoRestaurant {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.titleContent {
+    font-size: 1.10rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+}
+
+.phoneRestaurant, .emailRestaurant, .addressRestaurant {
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+    margin: 0;
+}
+
+.makeTo {
+    font-size: 0.9rem;
+    color: black;
+    font-family: var(--secondary-font);
+    text-align: center;
+    font-weight: 400;
+}
+
+.makeTo span {
+    font-weight: 500;
+}
+
+.contentFooterInfoRestaurant {
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .containerContentFooter {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+
+    .titleContent {
+        font-size: 1.25rem;
+    }
+
+    .phoneRestaurant, .emailRestaurant, .addressRestaurant, .makeTo {
+        font-size: 1rem;
+    }
+
+    .makeTo{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 990px) {
+
+    .titleFooter {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerContentFooter {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .titleFooter {
+        font-size: 1.25rem;
+    }
+
+    .titleContent {
+        font-size: 1rem;
+    }
+
+    .phoneRestaurant, .emailRestaurant, .addressRestaurant, .makeTo {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerContentFooter {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .titleFooter {
+        font-size: 1rem;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .titleContent {
+        font-size: 0.875rem;
+    }
+
+    .phoneRestaurant, .emailRestaurant, .addressRestaurant, .makeTo {
+        font-size: 0.75rem;
+    }
+
+    .lineFooter {
+        margin-bottom: 30px;
+    }
+}

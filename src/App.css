@@ -1,0 +1,27 @@
+:root {
+
+  /*Fonts du site internet*/
+
+  --primary-font: "Permanent Marker", cursive;
+  --secondary-font: "Montserrat", sans-serif;
+
+  /* Couleurs du site internet*/
+
+  --primary-color: #C48323;
+  --secondary-color: #FCD7A4;
+  --secondary-color-opacity: rgba(255, 215, 163, 0.9);
+  --third-color: #F6E1D0;
+}  
+
+body{
+  margin: 0;
+  background-color: var(--third-color);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}

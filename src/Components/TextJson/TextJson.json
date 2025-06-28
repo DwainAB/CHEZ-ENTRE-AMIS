@@ -1,0 +1,57 @@
+{
+    "refRestaurant": "5b5d7d39-6d6f-465b-8386-72ce4b39ab96", 
+    "restaurantName": "Chez entre amis",
+    "nav1": "Accueil",
+    "nav2": "Menu",
+    "nav3": "Lieu",
+    "nav4": "Panier",
+    "openingHours": [
+      { "day": 1, "start": 11.5, "end": 14.5, "_comment": "Lundi matin" },
+      { "day": 1, "start": 17.5, "end": 21.5, "_comment": "Lundi soir" },
+  
+      { "day": 2, "start": 11.5, "end": 14.5, "_comment": "Mardi matin" },
+      { "day": 2, "start": 17.5, "end": 21.5, "_comment": "Mardi soir" },
+  
+      { "day": 3, "start": 11.5, "end": 14.5, "_comment": "Mercredi matin" },
+      { "day": 3, "start": 17.5, "end": 21.5, "_comment": "Mercredi soir" },
+  
+      { "day": 4, "start": 11.5, "end": 14.5, "_comment": "Jeudi matin" },
+      { "day": 4, "start": 17.5, "end": 21.5, "_comment": "Jeudi soir" },
+  
+      { "day": 5, "start": 11.5, "end": 14.5, "_comment": "Vendredi matin" },
+      { "day": 5, "start": 17.5, "end": 21.5, "_comment": "Vendredi soir" },
+  
+      { "day": 6, "start": 11.5, "end": 14.5, "_comment": "Samedi matin" },
+      { "day": 6, "start": 19.5, "end": 21.5, "_comment": "Samedi soir" }
+    ],
+
+    "deliveryOptions": {
+      "delivery": false,
+      "pickup": true
+    },
+
+    "showMenuImages": false,  
+
+    "titleSection1" : "Notre restaurant",
+    "subtitleSection1": "Information",
+    "textSection1": "Chez nous, la qualité commence bien avant la cuisine.\n Chaque produit est rigoureusement sélectionné pour sa fraîcheur, son origine et son authenticité. \nNous privilégions des fournisseurs de confiance, des méthodes de conservation exigeantes,\n et un respect total des traditions. 🌿✨",
+
+    "quoteSection2": "Le sushi est la quintessence de l'art\n culinaire japonais, une fusion subtile\n de saveurs, de techniques et de\n traditions millénaires.",
+    "authorSection2" : "Nobu Matsuhisa",
+    "workAuthorSection2" : "Chef sushi renommé",
+
+    "mondayTime": "11:30 - 14:30 / 17:30 - 21:30",
+    "tuesdayTime": "11:30 - 14:30 / 17:30 - 21:30",
+    "wednesdayTime": "11:30 - 14:30 / 17:30 - 21:30",
+    "thursdayTime": "11:30 - 14:30 / 17:30 - 21:30",
+    "fridayTime": "11:30 - 14:30 / 17:30 - 21:30",
+    "saturdayTime": "11:30 - 14:30 / 17:30 - 21:30",
+    "sundayTime": "Fermé",
+
+    "phoneRestaurant": "",
+    "mailRestaurant": "entreamis95@gmail.com",
+    "adresseRestaurant": "6 place de la gare,\n 95330 Domont "
+  
+
+  }
+  

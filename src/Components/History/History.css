@@ -1,0 +1,99 @@
+.containerGlobalHistory{
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.titleHistory{
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 1.25rem; /* Augmenter la taille de la police pour une meilleure lisibilité */
+    margin: 0;
+}
+
+.textHistory{
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    margin-bottom: 50px;
+    line-height: 1.6; /* Améliorer la lisibilité du texte */
+}
+
+.subtitleHistory{
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem; /* Ajuster la taille pour les écrans plus petits */
+    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.containerImgHistory{
+    display: flex;
+    flex-direction: column; /* Affichage en colonne par défaut */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.containerImgHistory img{
+    width: 600px;
+    height: 400px;
+}
+
+@media (min-width: 768px) {
+    .containerImgHistory{
+        flex-direction: row; /* Affichage en ligne pour les écrans moyens à grands */
+        gap: 50px;
+    }
+    
+    .titleHistory {
+        font-size: 1.25rem; /* Augmenter la taille de la police pour les écrans moyens à grands */
+    }
+
+    .subtitleHistory {
+        font-size: 2.5rem; /* Ajuster la taille pour les écrans moyens à grands */
+    }
+}
+
+
+@media (max-width: 1290px) {
+    .containerImgHistory img{
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 990px) {
+
+    .containerImgHistory{
+        flex-direction: column;
+    }
+
+    .containerImgHistory img{
+        width: 600px;
+        height: 400px;
+    }
+
+    .titleHistory {
+        font-size: 1rem; /* Augmenter la taille de la police pour les écrans moyens à grands */
+    }
+}
+
+@media (max-width: 650px) {
+
+    .containerImgHistory img{
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .containerImgHistory img{
+        width: 320px;
+        height: 200px;
+        object-fit: cover;
+    }
+}

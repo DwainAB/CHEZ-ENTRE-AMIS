@@ -1,0 +1,110 @@
+.containerGlobalQuote{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 70px;
+    height: 500px;
+}
+
+.containerLeftQuote{
+    width: 50%;
+    background-color: var(--secondary-color);
+}
+
+.containerRightQuote{
+    width: 50%;
+}
+
+.containerRightQuote img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logoQuote{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.textQuote{
+    text-align: center;
+    font-size: 1.875rem;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+}
+
+.authorQuote{
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.authorQuote span{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1160px) {
+    .textQuote{
+        font-size: 1.5rem;
+    }
+
+    .authorQuote{
+        font-size: 1.25rem;
+    }
+    
+    .authorQuote span{
+        font-size: 1rem;
+    }
+
+    .logoQuote{
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .containerLeftQuote{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .containerGlobalQuote{
+        position: relative;
+        height: 350px;
+    }
+
+    .containerLeftQuote{
+        position: absolute;
+        width: 100%;
+        background-color: var(--secondary-color-opacity);
+        height: 100%;
+    }
+
+    .containerRightQuote{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .textQuote{
+        font-size: 1.25rem;
+    }
+
+    .authorQuote{
+        font-size: 1.15rem;
+    }
+    
+    .authorQuote span{
+        font-size: 1rem;
+    }
+
+    .logoQuote{
+        font-size: 2.5rem;
+        margin: 0;
+    }
+}
