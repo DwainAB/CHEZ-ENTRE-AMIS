@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 //import logo from "../../Assets/logo.png";
-import banner from "../../Assets/banner.png";
+import banner from "../../Assets/banner.webp";
 import "./Navbar.css";
 import TextJson from "../TextJson/TextJson.json";
+
+
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
+
 
     const navigate = useNavigate();
 
@@ -43,18 +46,34 @@ function Navbar() {
         ));
     };
 
-    const isPanierPage = location.pathname === '/panier';
+    // const isPanierPage = location.pathname === '/panier';
+    const isMenuPage = location.pathname === '/menu';
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add('no-scroll');
+            document.documentElement.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
+        }
+        return () => {
+            document.body.classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
+        };
+    }, [isOpen]);
 
     return (
-        <div className="containerGlobalNavbar" id="home" style={{ height: isPanierPage ? '130px' : '100vh' }}>
-            {!isPanierPage && <div className="shadowNavbar"></div>}
-            {!isPanierPage && (
+        <div className="containerGlobalNavbar" id="home" style={{ height: isMenuPage ? '130px' : '100vh' }}>
+            {/* {!isPanierPage && <div className="shadowNavbar"></div>} */}
+            {!isMenuPage && <div className="shadowNavbar"></div>}
+            {!isMenuPage && (
                 <img className="imgNavbar" src={banner} alt="" />
             )}
             
             <div className="containerTitle">
-                {!isPanierPage && <h1>{formatText(TextJson.restaurantName)}</h1>}
-                {!isPanierPage && <div className="mouse-container">
+                {!isMenuPage && <h1>{formatText(TextJson.restaurantName)}</h1>}
+                {!isMenuPage && <div className="mouse-container">
                     <div className="mouse">
                         <div className="scroll-wheel"></div>
                     </div>
@@ -71,9 +90,12 @@ function Navbar() {
                     <img className="logoNavbar" src={logo} alt="" />
                 </div> */}
                 <div className="listNavbar">
-                    <Link className="itemListNavbar" style={{ color: isPanierPage ? 'black' : '#fff' }} to="/" onClick={() => handleAnchorClick('home')}><p>{formatText(TextJson.nav1)}</p></Link>
-                    <Link className="itemListNavbar" style={{ color: isPanierPage ? 'black' : '#fff' }} to="/" onClick={() => handleAnchorClick('menu')}><p>{formatText(TextJson.nav2)}</p></Link>
-                    <Link className="itemListNavbar" style={{ color: isPanierPage ? 'black' : '#fff' }} to="/" onClick={() => handleAnchorClick('contact')}><p>{formatText(TextJson.nav3)}</p></Link>
+                    <Link className="itemListNavbar" style={{ color: isMenuPage ? 'black' : '#fff' }} to="/" onClick={() => {
+                        handleAnchorClick('home');
+                        setIsOpen(false);
+                    }}><p>{formatText(TextJson.nav1)}</p></Link>
+                    <Link className="itemListNavbar" style={{ color: isMenuPage ? 'black' : '#fff' }} to="/menu" onClick={() => {setIsOpen(false);}}><p>{formatText(TextJson.nav2)}</p></Link>
+                    <Link className="itemListNavbar" style={{ color: isMenuPage ? 'black' : '#fff' }} to="/" onClick={() => {handleAnchorClick('contact'); setIsOpen(false);}}><p>{formatText(TextJson.nav3)}</p></Link>
                 </div>
             </nav>
         </div>
